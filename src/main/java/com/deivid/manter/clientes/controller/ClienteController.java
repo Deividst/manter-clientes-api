@@ -15,6 +15,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 /**
+ * Controlador para manipulação das requisições rest.
  * @author Deivid
  */
 @CrossOrigin("*")

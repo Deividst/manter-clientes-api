@@ -4,7 +4,6 @@ import com.deivid.manter.clientes.enums.RiscoEnum;
 import com.deivid.manter.clientes.model.Cliente;
 import com.deivid.manter.clientes.model.Emprestimo;
 import com.deivid.manter.clientes.repository.ClienteRepository;
-import com.deivid.manter.clientes.repository.EnderecoRepository;
 import com.deivid.manter.clientes.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,18 +14,17 @@ import java.util.List;
 import java.util.Optional;
 
 /**
+ * Classe de serviço da entidade {@link Cliente}
  * @author Deivid
  */
 @Service
 public class ClienteServiceImpl implements ClienteService {
 
     private ClienteRepository clienteRepository;
-    private EnderecoRepository enderecoRepository;
 
     @Autowired
-    public ClienteServiceImpl(ClienteRepository clienteRepository, EnderecoRepository enderecoRepository) {
+    public ClienteServiceImpl(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
-        this.enderecoRepository = enderecoRepository;
     }
 
     @Override

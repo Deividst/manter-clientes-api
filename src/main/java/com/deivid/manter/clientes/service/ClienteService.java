@@ -1,5 +1,6 @@
 package com.deivid.manter.clientes.service;
 
+import com.deivid.manter.clientes.enums.RiscoEnum;
 import com.deivid.manter.clientes.model.Cliente;
 import com.deivid.manter.clientes.model.Emprestimo;
 
@@ -19,6 +20,8 @@ public interface ClienteService {
     Cliente update(Cliente cliente, Long id);
 
     Cliente delete(Long id);
+
+    RiscoEnum defineRisco(Cliente cliente);
 
     Emprestimo simulacao(Emprestimo emprestimo);
 }
